@@ -1,0 +1,31 @@
+name: Cache
+
+defaults:
+  run:
+    shell: pwsh
+
+on:
+    workflow_dispatch:
+    schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  Cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install PSResourceGet 1.0.4.1
+        run: Install-PSResource Microsoft.PowerShell.PSResourceGet
+      - name: Cache PSGallery
+        run: ./src/cache.ps1
+      - name: Upload psgallery-xml.zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: psgallery-xml.zip
+          path: psgallery-xml.zip
+      - name: Upload psgallery-json.zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: psgallery-json.zip
+          path: psgallery-json.zip
