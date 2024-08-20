@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Install PSResourceGet 1.0.4.1
-        run: Install-PSResource Microsoft.PowerShell.PSResourceGet
+        run: Install-PSResource Microsoft.PowerShell.PSResourceGet -TrustRepository
       - name: Cache PSGallery
         run: ./src/cache.ps1
       - name: Upload psgallery-xml.zip
