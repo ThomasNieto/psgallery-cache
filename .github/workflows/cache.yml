@@ -19,12 +19,12 @@ jobs:
         run: Install-PSResource Microsoft.PowerShell.PSResourceGet -TrustRepository
       - name: Cache PSGallery
         run: ./src/cache.ps1
-      - name: Upload psgallery-xml.zip
+      - name: Upload psgallery-xml
         uses: actions/upload-artifact@v4
         with:
           name: psgallery-xml
           path: psgallery.xml
-      - name: Upload psgallery-json.zip
+      - name: Upload psgallery-json
         uses: actions/upload-artifact@v4
         with:
           name: psgallery-json
