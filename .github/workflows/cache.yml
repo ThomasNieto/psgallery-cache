@@ -22,10 +22,10 @@ jobs:
       - name: Upload psgallery-xml.zip
         uses: actions/upload-artifact@v4
         with:
-          name: psgallery-xml.zip
-          path: psgallery-xml.zip
+          name: psgallery-xml
+          path: psgallery.xml
       - name: Upload psgallery-json.zip
         uses: actions/upload-artifact@v4
         with:
-          name: psgallery-json.zip
-          path: psgallery-json.zip
+          name: psgallery-json
+          path: psgallery.json
