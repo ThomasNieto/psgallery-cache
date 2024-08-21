@@ -9,12 +9,12 @@ The cache runs every hour.
 
 ## How to use the cache
 
-The `v0.1.0` release will get updated assets when the cache job runs.
+The `cache` release will get updated assets when the cache job runs.
 
 ```powershell
 # Clixml cache
-Invoke-RestMethod https://github.com/ThomasNieto/psgallery-cache/releases/download/v0.1.0/psgallery-xml.zip -OutFile psgallery-xml.zip
+Invoke-RestMethod https://github.com/ThomasNieto/psgallery-cache/releases/download/cache/psgallery-xml.zip -OutFile psgallery-xml.zip
 
 # JSON cache
-Invoke-RestMethod https://github.com/ThomasNieto/psgallery-cache/releases/download/v0.1.0/psgallery-json.zip -OutFile psgallery-json.zip
+Invoke-RestMethod https://github.com/ThomasNieto/psgallery-cache/releases/download/cache/psgallery-json.zip -OutFile psgallery-json.zip
 ```
